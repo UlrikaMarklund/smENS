@@ -1,8 +1,8 @@
 # Enteric Neuron Subtype Analysis Workflow
 
-This repository provides a workflow for analyzing enteric neuron subtypes using single-cell RNA sequencing (scRNA-seq) data processed with the **Seurat** framework. It accompanies the manuscript *Discovering the transcriptomes, connections, and development of submucosal neuron classes in the mouse small intestine* by Li and Morarach et al., 2024. The associated data is deposited in the Gene Expression Omnibus (GEO) database under the identifier **GSE263422**.
+This repository provides a workflow for analyzing enteric neuron subtypes using single-cell RNA sequencing (scRNA-seq) data processed with the **Seurat** framework. It accompanies the manuscript *Discovering the transcriptomes, connections, and development of submucosal neuron classes in the mouse small intestine* (Li and Morarach et al., 2024). The associated data is deposited in the Gene Expression Omnibus (GEO) database under the identifier **GSE263422**.
 
-The workflow includes key steps such as data loading, preprocessing, clustering, and iterative removal of non-enteric cells. The analysis procedures described in the manuscript are wrapped into a series of custom functions with adjustable parameters for reproducibility and ease of use. The main script, `RSCRIPT.R`, is organized into three parts:
+The analysis procedures described in the manuscript are wrapped into a series of custom functions with adjustable parameters for reproducibility and ease of use. The main script, `RSCRIPT.R`, is organized into three parts:
 
 - **Part 1: Libraries** – Load required R packages.  
 - **Part 2: Functions** – Define custom functions for preprocessing and analysis.  
