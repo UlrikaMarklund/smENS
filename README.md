@@ -42,7 +42,7 @@ load_sm <- load_data_10x(folders, seurat_object_version = "v5")
 ## Library Requirements
 - **R 4.4.1**
   
-This script works with:
+This script works with the following package versions:
 - **cols4all:** v0.7-1
 - **reticulate:** v1.39.0
 - **patchwork:** v1.3.0
