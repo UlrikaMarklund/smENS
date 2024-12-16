@@ -28,7 +28,7 @@ To follow this workflow, first load the Libraries and Functions sections of the 
 ## Analysis Overview
 ![Workflow Diagram](workflow.png)
 #### Main functions
-*For detailes, refer to the comments and descriptions embedded in the script.*
+*For details, refer to the comments and descriptions embedded in the script.*
 1. **Data Loading**
    - **`load_10x()`**: Load single-cell RNA sequencing data from 10x Genomics.
 2. **Pre-processing**
