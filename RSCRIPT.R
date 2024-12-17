@@ -392,13 +392,13 @@ run_simple_sctseurat_list <- function(seurat_list) {
     seu  <- SCTransform(seu) %>%
       RunPCA() %>%
       FindNeighbors(dims = 1:30) %>%
-      RunUMAP(dims = 1:30, n.epochs = 1000) %>%
+      RunUMAP(dims = 1:30, n.epochs = 800) %>%
       FindClusters()
     plot <- DimPlot(seu, reduction = 'umap') + theme_bw() + NoLegend()
     print(plot)
     analyzed_list[[i]] <- seu
   }
-  return(analyzed_objects)
+  return(analyzed_list)
 }
 ################################################################################
 # Utility function for simple clustering a Seurat object (SCT method).
