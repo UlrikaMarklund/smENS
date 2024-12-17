@@ -8,19 +8,16 @@ The analysis procedures described in the manuscript are wrapped into a series of
 - **Part 2: Functions** – Define custom functions for preprocessing and analysis.  
 - **Part 3: Analyses** – Perform the analyses, organized into four main sections.
 - (1) General Workflow for Cluster Analysis (Compatible with Seurat v5)
-- (2) P21 Submucosal Plexus Cluster Analysis
+- (2) P24 Submucosal Plexus Cluster Analysis
 - (3) P7 Small Intestine (ENS) Cluster Analysis
 - (4) Label Transfer 
 
 To follow this workflow, first load the Libraries and Functions sections of the `RSCRIPT.R` file. These only need to be loaded once per session. The Analyses section can then be executed as needed.
 
 ## Download data: 
-- Raw Data for P21 Submucosal Plexus: [sm022](https://drive.google.com/drive/folders/1nAobDmVAkmFx-QRjyDBW7ocfYWXS8f1x?usp=drive_link), 
-[sm023](https://drive.google.com/drive/folders/1uuWNFbw8wc-H4tyoTpTLxVAE_MFbhY_G?usp=drive_link), 
-[sm024](https://drive.google.com/drive/folders/1DDJA6XVjnBLEa_ULlDE5ovpvYNPQSOnU?usp=drive_link)
-- Raw Data for P7 Small Intestine ENS: [201](https://drive.google.com/drive/folders/1UI-vXvS43sziRlhsRCx3iho2Drg3C4HA?usp=drive_link), 
-[202](https://drive.google.com/drive/folders/1oIMGm7WIsF-Q45sHcpbAuZWgAWZypAdm?usp=drive_link)
-- [Processed P21 submucosal plexus](https://drive.google.com/file/d/1orbvUEjSYKwx-IuV4US_vUiFzk13xO1u/view?usp=drive_link)
+- Raw Data for P24 Submucosal Plexus GEO accession numbers: **GSM8191472, GSM8191473, GSM8191474**
+- Raw Data for P7 Small Intestine ENS GEO accession numbers: **GSM8191470, GSM8191471**
+- [Processed P24 submucosal plexus](https://drive.google.com/file/d/1orbvUEjSYKwx-IuV4US_vUiFzk13xO1u/view?usp=drive_link)
 - [Processed P7 small intestine ENS](https://drive.google.com/file/d/1jsALFSSyUJTjgR6a_sj0qIgpLP5YNWG8/view?usp=drive_link)
 - [ENS reference datasets for label transfer](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link)
 
@@ -73,7 +70,7 @@ To reproduce the results, specific package versions are required:
 ## Citation
 ```
 Discovering the transcriptomes, connections, and development of submucosal neuron classes in the mouse small intestine.
-Wei Li1,#, Khomgrit Morarach1,#, Ziwei Liu1, Yanan Chen1, Sanghita Banerjee1, Fernando López-Redondo1,2, Ashley L. Harb3,4, Elham Jalalvand1, Anastassia Mikhailova1, David R. Linden3,4, Ulrika Marklund1,*.
+Wei Li1,#, Khomgrit Morarach1,#, Ziwei Liu1, Sanghita Banerjee1, Yanan Chen1,  Ashley L. Harb2,3, Joel M. Kosareff2,3, Charles R. Hall2,3, Fernando López-Redondo1,4, Elham Jalalvand1, Suad H. Mohamed2,3, Anastassia Mikhailova1, David R. Linden2,3, Ulrika Marklund1,*
 
 #These authors contributed equally
 *Correspondence:
