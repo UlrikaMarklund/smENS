@@ -392,7 +392,7 @@ run_simple_sctseurat_list <- function(seurat_list) {
     seu  <- SCTransform(seu) %>%
       RunPCA() %>%
       FindNeighbors(dims = 1:30) %>%
-      RunUMAP(dims = 1:30, n.epochs = 800) %>%
+      RunUMAP(dims = 1:50, n.epochs = 1000) %>%
       FindClusters()
     plot <- DimPlot(seu, reduction = 'umap') + theme_bw() + NoLegend()
     print(plot)
@@ -408,7 +408,7 @@ run_simple_sctseurat <- function(seu) {
   seu  <- SCTransform(seu) %>%
     RunPCA() %>%
     FindNeighbors(dims = 1:30) %>%
-    RunUMAP(dims = 1:30, n.epochs = 1000) %>%
+    RunUMAP(dims = 1:50, n.epochs = 1000) %>%
     FindClusters()
   plot <- DimPlot(seu, reduction = 'umap') + theme_bw() + NoLegend()
   print(plot)
