@@ -15,8 +15,8 @@ The analysis procedures described in the manuscript are wrapped into a series of
 To follow this workflow, first load the Libraries and Functions sections of the `RSCRIPT.R` file. These only need to be loaded once per session. The Analyses section can then be executed as needed.
 
 ## Download data: 
-- Raw Data for P24 Submucosal Plexus GEO accession numbers: **GSM8191472, GSM8191473, GSM8191474**
-- Raw Data for P7 Small Intestine ENS GEO accession numbers: **GSM8191470, GSM8191471**
+- Raw Data for P24 Submucosal Plexus GEO accession numbers: GSM8191472, GSM8191473, GSM8191474
+- Raw Data for P7 Small Intestine ENS GEO accession numbers: GSM8191470, GSM8191471
 - [Processed P24 submucosal plexus](https://drive.google.com/file/d/1orbvUEjSYKwx-IuV4US_vUiFzk13xO1u/view?usp=drive_link)
 - [Processed P7 small intestine ENS](https://drive.google.com/file/d/1jsALFSSyUJTjgR6a_sj0qIgpLP5YNWG8/view?usp=drive_link)
 - [ENS reference datasets for label transfer](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link)
