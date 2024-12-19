@@ -48,6 +48,7 @@ load_sm <- load_data_10x(folders, seurat_object_version = "v5") #for Seurat v5
 ---
 ## Library Requirements
 - `R 4.4.1`
+- `Python 3.13.0`
   
 This script works with the following package versions:
 - `cols4all: v0.7-1`
