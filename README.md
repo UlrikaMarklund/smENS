@@ -22,9 +22,9 @@ To follow this workflow, first load the Libraries and Functions sections of the 
 - Raw Data for P7 Small Intestine ENS:  
   [GSM8191470](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8191470),  
   [GSM8191471](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8191471)  
-- [Processed P24 submucosal plexus](https://drive.google.com/file/d/1orbvUEjSYKwx-IuV4US_vUiFzk13xO1u/view?usp=drive_link)
-- [Processed P7 small intestine ENS](https://drive.google.com/file/d/1jsALFSSyUJTjgR6a_sj0qIgpLP5YNWG8/view?usp=drive_link)
-- [ENS reference datasets for label transfer](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link)
+- [Processed P24 submucosal plexus](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE263422&format=file&file=GSE263422%5Fsm%5Fp24%5Flv3%2Erds%2Egz)
+- [Processed P7 small intestine ENS](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE263422&format=file&file=GSE263422%5Fens%5Fp7%5Flv2%2Erds%2Egz)
+- [ENS reference datasets for label transfer](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link)  
 
 ---
 ## Analysis Overview
