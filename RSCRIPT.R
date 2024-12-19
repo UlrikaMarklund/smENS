@@ -137,8 +137,8 @@ filter_cell_by_threshold <-
   }
 # cells_to_keep <- filter_cell_by_threshold(ens_sm)
 ################################################################################
-# Given a Seurat object, this function will clusters cells over a range of 
-# resolutions using Leiden algorithms. In doing so, it will first perform  
+# Given a Seurat object, this function will cluster cells over a range of 
+# resolutions using Leiden algorithm. In doing so, it will first perform  
 # SCtransform(), RunPCA() and FindNeighbors() using 30 PCs.
 # The function takes 2 arguments: 
 # (1) A Seurat object,
@@ -154,7 +154,7 @@ get_reso_sweep_cluster <- function(seu, reso  = c(0.2, 0.6, 1.0, 1.2, 1.8)){
 # ens_sm <- get_reso_sweep_cluster(ens_sm)
 ################################################################################
 # This function iterates through the metadata with the prefix "^SCT_snn_res." and  
-# For each iteration, it identifies cluster outliers defined, per cluster, as 
+# For each iteration, it identifies cluster outliers, defined per cluster, as 
 # cells with minimum nCount_RNA = 800 or nCount_RNA below the 1st percentile,
 # or nCount_RNA above 99th percentile, or nFeature_RNA below the 1st percentile.   
 # The function takes 5 arguments: 
@@ -283,7 +283,7 @@ run_doubletFinder <-
   }
 # ens_sm <- run_doubletFinder(ens_sm, pK = NULL)
 ################################################################################
-# Utility function for analysis of a Seurat object based on SCT method.
+# Utility function for the analysis of a Seurat object based on SCT method.
 # It takes a Seurat object and returns analyzed object.
 # This function takes 11 arguments:
 # (1)  A Seurat Object,
