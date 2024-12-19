@@ -808,7 +808,7 @@ ens_sm_lv3 <- RenameIdents(
   "1" = "smENC3",
   "8" = "smENC3",
   "7" = "smENC3")
-ens_sm_lv3@meta.data$cell_class <- ens_sm_lv3@active.ident
+ens_sm_lv3@meta.data$cell.class <- ens_sm_lv3@active.ident
 DimPlot(ens_sm_lv3) + theme_bw() + NoLegend()
 # UMAP plot in Figure 1 was performed with the following settings:
 # RunUMAP(ens_sm_lv3, seed.use = 1234, dims = 1:20, 
