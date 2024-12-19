@@ -36,7 +36,7 @@ To follow this workflow, first load the Libraries and Functions sections of the 
    - **`analyze_sctseurat()`**: Identify and subset non-enteric neuron clusters iteratively.
 ---
 #### **Example of Dataset loading**
-Specify the folders containing paths to the CellRanger's output, `filtered_feature_bc_matrix`:
+Specify the `folders` containing paths to the CellRanger's output, `filtered_feature_bc_matrix`:
 ```R
 folders <- list(
   "~/sm022/filtered_feature_bc_matrix",
