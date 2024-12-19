@@ -759,7 +759,7 @@ ens_sm <- pre_process_ens(list(ens_sm),
                           dbfinder_annotation = "SCT_snn_res.0.2",
                           dbfinder_expected_prop = 0.075)
 # alternatively one can extract cells passing the QC from the metadata table 
-# mdata  <- read.csv(file = "~/sm_metadata.csv", header = FALSE, sep = "")
+# mdata  <- read.csv("~/NNReviewRound1/sm_metadata.csv", row.names=1)
 # ens_sm <- subset(ens_sm, cells = rownames(mdata)) #, Or
 # ens_sm <- readRDS("~/sm_p24_lv3.rds") for reanalyzis of processed Seurat object
 # Level 1 Clustering
