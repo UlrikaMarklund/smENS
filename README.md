@@ -24,7 +24,7 @@ To follow this workflow, first load the Libraries and Functions sections of the 
   [GSM8191471](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8191471)  
 - [Processed P24 submucosal plexus](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE263422&format=file&file=GSE263422%5Fsm%5Fp24%5Flv3%2Erds%2Egz)
 - [Processed P7 small intestine ENS](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE263422&format=file&file=GSE263422%5Fens%5Fp7%5Flv2%2Erds%2Egz)
-- [ENS reference datasets for label transfer](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link)  
+- [ENS reference datasets](https://drive.google.com/file/d/1Lmi6wDMmlhZ8JfWe2vmzS18qnWz4-Jqc/view?usp=drive_link) (for label transfer)  
 
 ---
 ## Analysis Overview
