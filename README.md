@@ -75,7 +75,7 @@ This script works with the following package versions:
 ### Reproducibility Requirements
 To reproduce the results, specific package versions are required:
 - `Seurat: v4.1.3`
-- `DoubletFinder: v2.0.3` (for functions `paramSweep_v3()` and `doubletFinder_v3()`)
+- `DoubletFinder: v2.0.3` (for the function `paramSweep_v3()` and `doubletFinder_v3()`)
 ---
 ## Citation
 ```
