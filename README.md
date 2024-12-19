@@ -62,6 +62,10 @@ This script works with the following package versions:
 - `SeuratObject: v5.0.2`
 - `sp: v2.1-4`
 - `stringr: v1.5.1`
+  
+`Seurat` (via `reticulate`) also uses the following Python packages:
+- `umap-learn v0.5.7`
+- `leidenalg v0.10.2`
 ### Reproducibility Requirements
 To reproduce the results, specific package versions are required:
 - `Seurat: v4.1.3`
