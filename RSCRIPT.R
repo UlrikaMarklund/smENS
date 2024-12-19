@@ -498,7 +498,8 @@ pre_process_ens <- function(seurat_list,
 # ens_sm  <- pre_process_ens(list(ens_sm))
 # load_sm <- pre_process_ens(load_sm)
 ################################################################################
-# Utility function for rawcount visualization as in the Seurat paper
+# Utility function for rawcount visualization as in the Seurat paper 
+# (Choudhary and  Satija, 2022: https://doi.org/10.1186/s13059-021-02584-9)
 plot_rawcount <- function(seu, seurat_object_version = "v3"){
   if (seurat_object_version == "v3") {
     rawdata <- seu@assays[["RNA"]]@counts
@@ -729,7 +730,7 @@ saveRDS(ens_sm_lv3, file = "~/ens_sm_lv3.rds")
 # and expected_prop = 0.075. Please note that we prodeced our results with
 # Seurat version 4.1.3, and with paramSweep_v3() and doubletFinder_v3(). Still,
 # we found no significant disparity in outcomes when used current versions (
-# Seurat version 5.1.0, doubletFinder 2.0.4: 20/09/24).
+# Seurat version 5.1.0, doubletFinder 2.0.4: 20/12/24).
 folders <- list(
   "~/sm022/filtered_feature_bc_matrix",
   "~/sm023/filtered_feature_bc_matrix",
@@ -758,22 +759,22 @@ ens_sm <- pre_process_ens(list(ens_sm),
                           dbfinder_annotation = "SCT_snn_res.0.2",
                           dbfinder_expected_prop = 0.075)
 # alternatively one can extract cells passing the QC from the metadata table 
-# mdata  <- read.csv(file = "~/metadata.csv", header = FALSE, sep = "")
-# ens_sm <- subset(ens_sm, cells = rownames(mdata))
+# mdata  <- read.csv(file = "~/sm_metadata.csv", header = FALSE, sep = "")
+# ens_sm <- subset(ens_sm, cells = rownames(mdata)) #, Or
+# ens_sm <- readRDS("~/sm_p24_lv3.rds") for reanalyzis of processed Seurat object
 # Level 1 Clustering
-# ens_sm_lv1  <- readRDS("~/ens-sm-lv1.Jun23.rds")
 ens_sm_lv1 <- analyze_sctseurat(ens_sm[[1]], 
                                 mask_gene = 'sex',
                                 cluster_reso = 1.8,
                                 cluster_algo = 1,
                                 neighbors_dims = 1:50
                                 )
+# Define non-enteric neuron clusters, based on marker expression.
 cell_removed_lv1 <- WhichCells(ens_sm_lv1, 
                                idents = c('24', '27', '17', '22', 
                                           '18', '21', '23')
                                )
 # Level 2 Clustering
-# ens_sm_lv2  <- readRDS("~/ens-sm-lv2.Jun23.rds")
 ens_sm_lv2 <- analyze_sctseurat(ens_sm_lv1, 
                                 mask_gene = 'sex',
                                 remove_cell = cell_removed_lv1,
@@ -781,12 +782,12 @@ ens_sm_lv2 <- analyze_sctseurat(ens_sm_lv1,
                                 cluster_algo = 4,
                                 neighbors_dims = 1:50
                                 )
+# Define remaining non-enteric neuron clusters, based on markers.
 cell_removed_lv2 <- WhichCells(ens_sm_lv2, 
                                idents = c('13','17','14','19',
                                           '12','18','15','16')
                                )
 # Level 3 Clustering
-# ens_sm_lv3  <- readRDS("~/ens-sm-lv3c.Jun23.rds")
 ens_sm_lv3 <- analyze_sctseurat(ens_sm_lv2, 
                                 mask_gene = 'sex',
                                 remove_cell = cell_removed_lv2,
@@ -794,7 +795,7 @@ ens_sm_lv3 <- analyze_sctseurat(ens_sm_lv2,
                                 cluster_algo = 4,
                                 neighbors_dims = 1:50
                                 )
-# Join clusters to cell classes
+# Join clusters to cell classes based on inspection of marker expression.
 # Combine clusters to cell classes, rename to smENC1, smENC2 and smENC3, and add
 # to the object metadata as 'cell_class'. 
 ens_sm_lv3 <- RenameIdents(
@@ -810,6 +811,8 @@ ens_sm_lv3 <- RenameIdents(
   "7" = "smENC3")
 ens_sm_lv3@meta.data$cell.class <- ens_sm_lv3@active.ident
 DimPlot(ens_sm_lv3) + theme_bw() + NoLegend()
+# Save analyzed data in the working directory
+saveRDS(ens_sm_lv3, file = "~/ens_sm_lv3.rds")
 # UMAP plot in Figure 1 was performed with the following settings:
 # RunUMAP(ens_sm_lv3, seed.use = 1234, dims = 1:20, 
 # umap.method = "umap-learn", metric = "cosine", n.neighbors = 45L, 
@@ -851,7 +854,7 @@ ens_p7_lv1 <- analyze_sctseurat(ens_p7,
                                 cluster_reso = 0.8,
                                 cluster_algo = 1,
                                 neighbors_dims = 1:50)
-# Identify ENS clusters
+# Identify non-ENS clusters to be removed in the next level
 cell_removed_p7_lv1 <- WhichCells(ens_p7_lv1,
                                   idents = c('12','18','19','20','21'),
                                   invert = F)
