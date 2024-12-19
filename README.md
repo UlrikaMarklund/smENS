@@ -7,7 +7,7 @@ The analysis procedures described in the manuscript are wrapped into a series of
 - **Part 1: Libraries** – Load required R packages.  
 - **Part 2: Functions** – Define custom functions for preprocessing and analysis.  
 - **Part 3: Analyses** – Perform the analyses, organized into four main sections.
-- (1) General Workflow for Cluster Analysis (Compatible with Seurat v5)
+- (1) General Workflow for Cluster Analysis (Compatible with `Seurat v5`)
 - (2) P24 Submucosal Plexus Cluster Analysis
 - (3) P7 Small Intestine (ENS) Cluster Analysis
 - (4) Label Transfer 
@@ -29,9 +29,9 @@ To follow this workflow, first load the Libraries and Functions sections of the 
 1. **Data Loading**
    - **`load_10x()`**: Load single-cell RNA sequencing data from 10x Genomics.
 2. **Pre-processing**
-   - **`filter_cell_by_threshold()`**: Exclude low-quality cells based on thresholds for `nFeature_RNA` and `nCount_RNA`.
+   - **`filter_cell_by_threshold()`**: Exclude low-quality cells based on thresholds for `nFeature_RNA`, `nCount_RNA` and `percent.mt`.
    - **`get_cluster_outlier()`**: Exclude extreme outliers, sweeping different resolution values.
-   - **`run_dbfinder()`**: Exclude doublets by `DoubletFinder` (with Seurat’s SCT)
+   - **`run_dbfinder()`**: Exclude doublets by `DoubletFinder` (with `Seurat`’s SCT)
 3. **Iterative Clustering and removing of non-relevant clusters**
    - **`analyze_sctseurat()`**: Identify and subset non-enteric neuron clusters iteratively.
 ---
