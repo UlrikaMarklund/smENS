@@ -715,22 +715,6 @@ plot_violin(ens_sm_lv3, gene_plot = gene_plot, col = 'c2a2', gene_angle = 90)
 # At this level, clusters should contains only enteric neurons.
 ens_sm_lv3 <- FindClusters(ens_sm_lv3, algorithm = 4, resolution = 0.4)
 DimPlot(ens_sm_lv3, group.by = 'SCT_snn_res.0.4') + theme_bw() + NoLegend()
-# 1.6) Join clusters to cell classes
-# Combine clusters to cell classes, rename to smENC1, smENC2 and smENC3, and add
-# to the object metadata as 'cell_class'. 
-ens_sm_lv3 <- RenameIdents(
-  ens_sm_lv3,
-  "8" = "smENC1",
-  "5" = "smENC2",
-  "4" = "smENC2",
-  "3" = "smENC2",
-  "6" = "smENC2",
-  "2" = "smENC3",
-  "1" = "smENC3",
-  "8" = "smENC3",
-  "7" = "smENC3")
-ens_sm_lv3@meta.data$cell_class <- ens_sm_lv3@active.ident
-DimPlot(ens_sm_lv3) + theme_bw() + NoLegend()
 # Save analyzed data in the working directory
 saveRDS(ens_sm_lv3, file = "~/ens_sm_lv3.rds")
 ################################################################################
@@ -810,6 +794,22 @@ ens_sm_lv3 <- analyze_sctseurat(ens_sm_lv2,
                                 cluster_algo = 4,
                                 neighbors_dims = 1:50
                                 )
+# Join clusters to cell classes
+# Combine clusters to cell classes, rename to smENC1, smENC2 and smENC3, and add
+# to the object metadata as 'cell_class'. 
+ens_sm_lv3 <- RenameIdents(
+  ens_sm_lv3,
+  "8" = "smENC1",
+  "5" = "smENC2",
+  "4" = "smENC2",
+  "3" = "smENC2",
+  "6" = "smENC2",
+  "2" = "smENC3",
+  "1" = "smENC3",
+  "8" = "smENC3",
+  "7" = "smENC3")
+ens_sm_lv3@meta.data$cell_class <- ens_sm_lv3@active.ident
+DimPlot(ens_sm_lv3) + theme_bw() + NoLegend()
 # UMAP plot in Figure 1 was performed with the following settings:
 # RunUMAP(ens_sm_lv3, seed.use = 1234, dims = 1:20, 
 # umap.method = "umap-learn", metric = "cosine", n.neighbors = 45L, 
