@@ -23,7 +23,7 @@ To follow this workflow, first load the Libraries and Functions sections of the 
 
 ---
 ## Analysis Overview
-![Workflow Diagram](Workflow01.png)
+![Workflow Diagram](workflow.png)
 #### Main functions
 *For details, refer to the comments and descriptions embedded in the script.*
 1. **Data Loading**
