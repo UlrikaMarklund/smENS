@@ -499,7 +499,7 @@ pre_process_ens <- function(seurat_list,
 # load_sm <- pre_process_ens(load_sm)
 ################################################################################
 # Utility function for rawcount visualization as in the Seurat paper 
-# (Choudhary and  Satija, 2022: https://doi.org/10.1186/s13059-021-02584-9)
+# (Choudhary and Satija, 2022: https://doi.org/10.1186/s13059-021-02584-9)
 plot_rawcount <- function(seu, seurat_object_version = "v3"){
   if (seurat_object_version == "v3") {
     rawdata <- seu@assays[["RNA"]]@counts
