@@ -791,7 +791,7 @@ cell_removed_lv2 <- WhichCells(ens_sm_lv2,
 ens_sm_lv3 <- analyze_sctseurat(ens_sm_lv2, 
                                 mask_gene = 'sex',
                                 remove_cell = cell_removed_lv2,
-                                cluster_reso = 0.8,
+                                cluster_reso = 0.4,
                                 cluster_algo = 4,
                                 neighbors_dims = 1:50
                                 )
