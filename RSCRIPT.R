@@ -807,7 +807,7 @@ ens_sm_lv3 <- RenameIdents(
   "6" = "smENC2",
   "2" = "smENC3",
   "1" = "smENC3",
-  "8" = "smENC3",
+  "9" = "smENC3",
   "7" = "smENC3")
 ens_sm_lv3@meta.data$cell.class <- ens_sm_lv3@active.ident
 DimPlot(ens_sm_lv3) + theme_bw() + NoLegend()
