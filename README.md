@@ -78,7 +78,7 @@ To reproduce the results, specific package versions are required:
 ---
 ## Citation
 ```
-Discovering the transcriptomes, connections, and development of submucosal neuron classes in the mouse small intestine.
+The transcriptomes, connections, and development of submucosal neuron classes in the mouse small intestine.
 Wei Li,#, Khomgrit Morarach,#, Ziwei Liu, Sanghita Banerjee, Yanan Chen,  Ashley L. Harb, Joel M. Kosareff, Charles R. Hall, Fernando López-Redondo, Elham Jalalvand, Suad H. Mohamed, Anastassia Mikhailova, David R. Linden, Ulrika Marklund,*
 
 #These authors contributed equally
